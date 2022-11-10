@@ -8,15 +8,17 @@ import cartopy.feature as cfeature
 import matplotlib.pyplot as plt 
 import datetime 
 
+
+# open grouped grib file as Xarray dataset
 ds = xr.open_dataset('data/output_grib_file.grib2',engine='cfgrib')
 
-#print(ds)
-temp = ds.isel(x=209,y=1)
-temp1 = temp.to_array()
-#print(temp)
+
+# select current lon and lat grid point from lamwestpoints, and then convert to data array
 #lat = 48.428421
 #lon = -123.365646
-#t0_ds = ds.isel(step=0)
-temp1.plot()    
+temp = ds.isel(x=209,y=1).to_array()
+
+#line plot 
+temp.plot()    
+
 plt.show()
-#xplt.line(temp1,)
