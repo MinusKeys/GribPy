@@ -1,0 +1,3 @@
+CMC_hrdps_west_TCDC_SFC_0_ps2.5km_2022111100_P000-00.grib2 
+
+

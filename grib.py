@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import datetime 
 
 
+
 # open grouped grib file as Xarray dataset
 ds = xr.open_dataset('data/output_grib_file.grib2',engine='cfgrib')
 
